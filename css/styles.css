@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #DAB88B;
+    color: #262626;
+}
+ 
+model-viewer {
+    --poster-color: transparent;
+    --progress-bar-color: rgba(255, 255, 255, 0.5);
+    --progress-mask: transparent;
+    --progress-container-color: transparent;
+    width: 100%;
+    height: auto; /* Adjust height to maintain the aspect ratio */
+    max-height: 300px; /* Set a max-height */
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../images/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 14rem;
+}
+
+.hero h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+h2 {
+    font-size: 2em;
+    text-align: center;
+}
+
+.products-gallery {
+    display: flex;
+    justify-content: space-between; /* Distribute space between the cards */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    padding: 1rem;
+}
+
+.product-card {
+    flex: 0 0 32%; /* Each card will take up roughly a third of the container width */
+    margin: 0.5rem; /* Add some space around the cards */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content inside each card */
+}
+
+.product-card model-viewer {
+    width: 100%; /* Ensure the model takes up the full card width */
+    height: 300px; /* Set a fixed height for the model viewers */
+    border: none; /* Remove border for a cleaner look, adjust as needed */
+}
+
+.product-card h3 {
+    margin-top: 1rem; /* Add some space above the title */
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .products-gallery {
+        grid-template-columns: repeat(2, 1fr); /* Two items in a row for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .products-gallery {
+        grid-template-columns: 1fr; /* One item in a row for very small screens */
+    }
+}

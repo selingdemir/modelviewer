@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furnique</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+
+<body>   
+    <div class="hero">
+        <h1>FURNIQUE</h1>
+    </div>
+    <section class="products">
+        <h2>Gallery</h2>
+        <div class="products-gallery">
+            <div class="product-card">
+                <model-viewer src="./models/Untitled2.glb"
+                alt="Green Old Sofa"
+                ar
+                auto-rotate
+                camera-controls
+                poster="./images/chair-Camera.png">
+                    <!-- Define hotspots and annotations within model-viewer for each product -->
+                    <button slot="hotspot" data-position="0.5m 0.5m 0.5m" data-normal="0m 0m 1m" id="hotspot-1">Info</button>
+                    <div slot="annotation" for="hotspot-1">
+                        Details about the Green Old Sofa.
+                    </div>
+                </model-viewer>
+                <h3>Green Old Sofa</h3>
+            </div>
+            <div class="product-card">
+                <model-viewer src="./models/Untitled.glb"
+                    alt="Leather Chester"
+                    ar
+                    auto-rotate
+                    camera-controls
+                    poster="./images/chester1-Camera.png">
+                    <button slot="hotspot" data-position="0.5m 0.5m 0.5m" data-normal="0m 0m 1m" id="hotspot-2">Info</button>
+                    <div slot="annotation" for="hotspot-2">
+                        Learn more about Leather Chester's features.
+                    </div>
+                </model-viewer>
+                <h3>Leather Chester</h3>
+            </div>
+            <div class="product-card">
+                <model-viewer src="./models/Untitled3.glb" 
+                    alt="Single Sofa"
+                    ar
+                    auto-rotate
+                    camera-controls
+                    poster="./images/single1-Camera.png"
+                    shadow-intensity="1">
+                    <button slot="hotspot" data-position="0.5m 0.5m 0.5m" data-normal="0m 0m 1m" id="hotspot-3">Info</button>
+                    <div slot="annotation" for="hotspot-3">
+                        Discover the comfort of the Single Sofa.
+                    </div>
+                    <div class="progress-bar hide" slot="progress-bar">
+                        <div class="update-bar"></div>
+                    </div>
+                </model-viewer>
+                <h3>Single Sofa</h3>
+            </div>
+        </div>    
+    </section>
+</body>
+<script src="./js/script.js"></script>
+</html>
